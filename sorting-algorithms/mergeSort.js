@@ -19,7 +19,7 @@ function merge(arr1, arr2) {
       j++;
     }
   }
-  //once we exhaust one array, push in all remaining values from the other array
+  //once one array is exhausted, push in all remaining values from the other array
   while (i < arr1.length) {
     newArray.push(arr1[i]);
     i++;
