@@ -35,7 +35,7 @@ var romanToInt = function (s) {
 
   let result = 0;
 
-  for (i = 0; i < s.length; i++) {
+  for (let i = 0; i < s.length; i++) {
     const currentIndex = romanNumValues[s[i]];
     const nextIndex = romanNumValues[s[i + 1]];
 
@@ -51,5 +51,6 @@ var romanToInt = function (s) {
   return result;
 };
 
+romanToInt("IV");
 // romanToInt("III");
-romanToInt("MCMXCIV");
+// romanToInt("MCMXCIV");
