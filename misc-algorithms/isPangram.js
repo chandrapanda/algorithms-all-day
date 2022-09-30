@@ -11,25 +11,25 @@ var isPangram = function (str) {
   if (str.length < 26) {
     return false;
   }
-    //instantiate an empty array to fill with values of characters in string
+  //instantiate an empty array to fill with values of characters in string
   let uniqueChars = [];
-    //change str to lowercase (so JS doesn't declare A !== a)
+  //change str to lowercase (so JS doesn't declare A !== a)
   let lowerCaseStr = str.toLowerCase();
 
   //iterate over lower case string
   for (let i = 0; i < lowerCaseStr.length; i++) {
-      //current character is declared at the string AT the ASCII code index 
+    //current character is declared at the string AT the ASCII code index
     let currentChar = lowerCaseStr.charCodeAt(i);
-      //make sure special characters do not enter our array (such as commas, semicolons)
-      if (currentChar >= 97 && currentChar <= 122) {
-          //mark the ASCII code as "truthy" in our array
-          uniqueChars[currentChar] = true;
-      }
-      //if ALL uniqueChars exist (26 letters of the alphabet NOT including the 97 ASCII characters before ABC starts) return truthy
-      if (uniqueChars.length - 97 === 26) {
-          return true;
-      }
+    //make sure special characters do not enter our array (such as commas, semicolons)
+    if (currentChar >= 97 && currentChar <= 122) {
+      //mark the ASCII code as "truthy" in our array
+      uniqueChars[currentChar] = true;
     }
+    //if ALL uniqueChars exist (26 letters of the alphabet NOT including the 97 ASCII characters before ABC starts) return truthy
+    if (uniqueChars.length - 97 === 26) {
+      return true;
+    }
+  }
   return false;
 };
 
